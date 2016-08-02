@@ -16,10 +16,10 @@ bot = telebot.TeleBot(config.token)
 def welcome(m):
     cid = m.chat.id
     markup = types.InlineKeyboardMarkup()
-    a = types.InlineKeyboardButton("Taylor Team \xE2\x9C\x8C", url="https://telegram.me/taylor_team")
+    a = types.InlineKeyboardButton("Taylor Team \xE2\x9C\x8C", url="https://telegram.me/VANDEVOORDE")
     c = types.InlineKeyboardButton("Add group \xE2\x9C\x8C", url="https://telegram.me/ID_bot_robot?startgroup=test")
     markup.add(a, c)
-    b = types.InlineKeyboardButton("Developer ID bot \xE2\x9C\x8C", url="https://telegram.me/negative_officiall")
+    b = types.InlineKeyboardButton("Developer ID bot \xE2\x9C\x8C", url="https://telegram.me/VANDEVOORDE")
     markup.add(b)
     nn = types.InlineKeyboardButton("Inline Mode", switch_inline_query='')
     markup.add(nn)
@@ -39,7 +39,7 @@ def id(m):      # info menu
     p = m.pinned_message
     fromm = m.forward_from
     markup = types.InlineKeyboardMarkup()
-    markup.add(types.InlineKeyboardButton("\xF0\x9F\x98\x8A Taylor Team \xF0\x9F\x98\x8A", url="https://telegram.me/taylor_team"))
+    markup.add(types.InlineKeyboardButton("\xF0\x9F\x98\x8A Taylor Team \xF0\x9F\x98\x8A", url="https://telegram.me/forcetg_ch"))
 #info text
     bot.send_chat_action(cid, "typing")
     bot.reply_to(m, "*ID from* : ```{}``` \n\n *Chat name* : ```{}``` \n\n\n *Your Username* : ```{}``` \n\n *Your First Name* : ```{}```\n\n *Your Last Name* : ```{}```\n\n *Type From* : ```{}``` \n\n *Msg data* : ```{}```\n\n *Your Msg* : ```{}```\n\n* pind msg * : ```{}```\n\n *from* : ```{}```".format(cid,title,usr,f,l,t,d,text,p,fromm), parse_mode="Markdown", reply_markup=markup)
@@ -48,26 +48,26 @@ def id(m):      # info menu
 def c(m):
     uid = m.chat.id
     bot.send_chat_action(uid, 'typing')
-    bot.send_contact(uid, phone_number="+98 937 909 7344", first_name="Negative")
+    bot.send_contact(uid, phone_number="+1 604 900 0732", first_name="VANDEVOORDE")
 
 
-@bot.message_handler(commands=['about']) # copy right Taylor Team
+@bot.message_handler(commands=['about']) # copy right force Team
 def p(m):
     uid = m.chat.id
     markup = types.InlineKeyboardMarkup()
     v = types.InlineKeyboardButton('\xF0\x9F\x91\x87 \xF0\x9F\x91\xA5 Thanks to \xF0\x9F\x91\xA5 \xF0\x9F\x91\x87', callback_data='Team')
-    a = types.InlineKeyboardButton('Negative', url='https://telegram.me/negative_officiall')
-    b = types.InlineKeyboardButton('Parham', url='https://telegram.me/UnFriendlly')
-    c = types.InlineKeyboardButton('Arsalan', url='https://telegram.me/mute_all')
-    n = types.InlineKeyboardButton('Amircc_CreeD', url='https://telegram.me/Amircc_CreeD')
+    a = types.InlineKeyboardButton('Negative', url='https://telegram.me/VANDEVOORDE')
+    b = types.InlineKeyboardButton('Parham', url='https://telegram.me/MOHAMMAD_FUCKR')
+    c = types.InlineKeyboardButton('Arsalan', url='https://telegram.me/Developer_Sudo')
+    n = types.InlineKeyboardButton('Amircc_CreeD', url='https://telegram.me/QueeNlua')
     m = types.InlineKeyboardButton('sorblack', url='https://telegram.me/sorblack')
     k = types.InlineKeyboardButton('MrJacki', url='https://telegram.me/MrJacki')
     j = types.InlineKeyboardButton('allwen', url='https://telegram.me/allwen')
     o = types.InlineKeyboardButton('Randall', url='https://telegram.me/Xx_Randall_Xx')
     p = types.InlineKeyboardButton('NeonGame', url='https://telegram.me/pokr_face')
     y = types.InlineKeyboardButton('\xF0\x9F\x92\x8E End \xF0\x9F\x92\x8E', callback_data='Team')
-    ch = types.InlineKeyboardButton('Channel', url='https://telegram.me/idbot_channel')
-    git = types.InlineKeyboardButton('Github', url='https://github.com/taylor-team')
+    ch = types.InlineKeyboardButton('Channel', url='https://telegram.me/forcetg_ch')
+    git = types.InlineKeyboardButton('Github', url='https://github.com/force')
     markup.add(v)
     markup.add(a, j)
     markup.add(b, c)
@@ -76,15 +76,15 @@ def p(m):
     markup.add(y)
     markup.add(ch, git)
     bot.send_chat_action(uid, 'typing')
-    bot.send_message(uid, "Taylor Team development Telegram bot and web mastering \n\n developers : \n [negative](https://telegram.me/negative_officiall) \n [Parham](https://telegram.me/UnFriendlly)", parse_mode="Markdown")
-    bot.send_photo(uid, open('taylor.jpg'), caption="@Taylor_Team", reply_markup=markup)
+    bot.send_message(uid, "force T development Telegram bot and web mastering \n\n developers : \n [VANDEVOORDE](https://telegram.me/VANDEVOORDE) \n [Parham](https://telegram.me/Developer_Sudo)", parse_mode="Markdown")
+    bot.send_photo(uid, open('force.jpg'), caption="@forcetg_ch", reply_markup=markup)
 
 @bot.message_handler(commands=['idbot'])
 def handler(m):
     cid = m.chat.id
-    bot.send_message(cid, "My Name is ID bot \n creator and developer : [negative](https://telegram.me/negative_officiall) \n development channel : [Taylor Team](https://telegram.me/taylor_team)\n\n [github](https://github.com/taylor-team/id-bot)", parse_mode="Markdown")
+    bot.send_message(cid, "My Name is ID bot \n creator and developer : [VANDEVOORDE](https://telegram.me/VANDEVOORDE) \n development channel : [force](https://telegram.me/forcetg_ch)\n\n [github](https://github.com/GSRMOHAMMAD/ID)", parse_mode="Markdown")
     bot.send_chat_action(cid, "upload_photo")
-    bot.send_photo(cid, open('slackbot-story1-582x436.jpg'), caption="@ID_bot_robot  \xF0\x9F\x98\x9C")
+    bot.send_photo(cid, open('slackbot-story1-582x436.jpg'), caption="@ID_BOTR_BOT  \xF0\x9F\x98\x9C")
 
 @bot.message_handler(commands=['idme'])
 def test_handler(m):
@@ -176,11 +176,4 @@ def whois(m):
 
 bot.polling(True)
 #end
-# _____           _              _____
-#|_   _|_ _ _   _| | ___  _ __  |_   _|__  __ _ _ __ ___
-#  | |/ _` | | | | |/ _ \| '__|   | |/ _ \/ _` | '_ ` _ \
-#  | | (_| | |_| | | (_) | |      | |  __/ (_| | | | | | |
-#  |_|\__,_|\__, |_|\___/|_|      |_|\___|\__,_|_| |_| |_|
-#           |___/
-#Copy right  2016 Negative - Taylor Team
-#MIT license
+
